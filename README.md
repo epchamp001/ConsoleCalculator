@@ -18,4 +18,5 @@
 ---
 
 ## **An example of the work**
-![image](https://github.com/user-attachments/assets/42501022-6fb5-489e-bb54-473a89780f05)
+![image](https://github.com/user-attachments/assets/11a0d2ba-2502-457a-8804-a507498f754f)
+
