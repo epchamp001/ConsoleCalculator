@@ -26,6 +26,10 @@ func CalculateExpression(expression string) (float64, error) {
 func evaluteFlatExpression(expression string) (float64, error) {
 	var err error
 	for strings.ContainsAny(expression, "%*/") {
+		if _, parseErr := strconv.ParseFloat(expression, 64); parseErr == nil {
+			break
+		}
+
 		expression, err = calculateSimpleExpression(expression, "*/%")
 		if err != nil {
 			return 0, err
@@ -33,6 +37,10 @@ func evaluteFlatExpression(expression string) (float64, error) {
 	}
 
 	for strings.ContainsAny(expression, "+-") {
+		if _, parseErr := strconv.ParseFloat(expression, 64); parseErr == nil {
+			break
+		}
+
 		expression, err = calculateSimpleExpression(expression, "+-")
 		if err != nil {
 			return 0, err
